@@ -7,11 +7,12 @@ function evaluateGuess {
 	fi
 }
 
-echo "welcome to the guessing game"
 let numFiles=$(ls -1 | wc -l)
 #echo "number of files = $numFiles"
 
-echo "Guess how many files are in this directory"
+echo "How many files are in this directory?"
+echo "Please enter a guess:"
+
 read response
 
 while [[ $response -ne numFiles ]]
@@ -21,4 +22,4 @@ read response
 done
 
 echo "Correct!"
-echo "End program"
+#echo "End program"
